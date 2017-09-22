@@ -86,6 +86,9 @@ Used libraries (ionic bundle, angular translate) are stored in "lib" root folder
 
 ## History
 
+### Version 1.10.0
+- Merged pull request "Fix stuck placeholder in Safari 11 /iOS 11. Support popup-class for modal mode too." Thanks again [amplexdenmark](https://github.com/amplexdenmark).
+
 ### Versions 1.9.0, 1.9.1
 - Merged pull request "HTML field name, required attr, popup alternative, popup class". Thanks [aless673](https://github.com/aless673). Updated Readme.md.
 
