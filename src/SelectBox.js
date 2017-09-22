@@ -49,7 +49,7 @@
                     } else {
                         $scope.showSelectModal();
                     }
-                }
+                };
                 $scope.showSelectModal = function () {
                     $scope.renderModal();
                     $scope.modal.show().then(function(modal) {
@@ -75,12 +75,15 @@
                 });
 
                 $scope.$watch('ngPlaceholder', function (newValue, oldValue) {
-                    angular.element($element.children()[0]).children()[0].innerText = newValue;
+                  if (oldValue == $scope.label) {
+                    $scope.setPlaceholderLabel(newValue)
+                  }
+                  $scope.setPlaceHolder(newValue)
                 });
 
                 $scope.$watch('ngSelectedValue', function (newValue, oldValue) {
                     //console.log('selected value changed from ', oldValue, ' to ', newValue);
-                    if(undefined != newValue) {
+                    if(undefined !== newValue) {
                         var val = $parse($scope.ngData);
                         $scope.ngDataObjects = val($scope.$parent);
                         var i=0, len=$scope.ngDataObjects.length;
@@ -95,7 +98,8 @@
                 });
 
                 $scope.renderModal = function () {
-                    $scope.modal = $ionicModal.fromTemplate('<ion-modal-view id="select" class="ionic-select-enable">'
+                    $scope.modal = $ionicModal.fromTemplate(
+                          '<ion-modal-view id="select" class="ionic-select-enable '+$scope.ngPopupClass+'">'
                         + '<ion-header-bar class="' + $scope.ngHeaderClass + '">'
                         + '<h1 class="title">' + $scope.ngTitle + '</h1>'
                         + ' <a ng-click="closeSelectModal()" class="button button-icon icon ion-close ionic-select-enable"></a>'
@@ -113,7 +117,6 @@
                 };
 
                 $scope.renderPopup = function () {
-                    console.log($scope.ngPopupClass);
                     $scope.popup = $ionicPopup.alert({
                         title: $scope.ngTitle,
                         scope: $scope,
