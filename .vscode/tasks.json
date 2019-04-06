@@ -1,0 +1,22 @@
+{
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "install",
+            "problemMatcher": []
+        },
+        {
+            "label": "gulp: default",
+            "type": "shell",
+            "command": "gulp",
+            "args": ["default"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always"
+            }
+        }
+    ]
+}

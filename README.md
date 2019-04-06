@@ -3,7 +3,7 @@ ionic-Select-Control
 
 ## Description
 
-This is a customizable select box for ionic framework.
+This is a customizable select box for ionic 1 framework.
 While the package name is "ionic-select-control", the module name is "$selectBox".
 
 ## Dependencies
@@ -13,9 +13,10 @@ Clicking outside the modal won't close it.
 
 ## How to use
 
-1. Install with bower:
+1. Install with bower/npm:
 
 `bower install ionic-select-control --save`
+`npm install ionic-select-control --save`
 
 2. Include as a dependency of your angular module:
 
@@ -50,7 +51,7 @@ angular.module('myApp', ['ionic', '$selectBox'])
 
 </select-box>
 ```
- 
+
 ### Directive parameters
 | Name | Description |Remark |
 | :------------- | :------------- | :------------- |
@@ -80,11 +81,14 @@ var obj = [
 
 ## Tests
 
-In "test" root folder, there are some html test pages with different configurations, stylings. 
+In "test" root folder, there are some html test pages with different configurations, stylings.
 They don't require a web server to be opened, thus are kept basic.
 Used libraries (ionic bundle, angular translate) are stored in "lib" root folder.
 
 ## History
+
+### Version 1.10.1
+- Fix missing function (https://github.com/OSAMES/ionic-Select-Control/issues/19).
 
 ### Version 1.10.0
 - Merged pull request "Fix stuck placeholder in Safari 11 /iOS 11. Support popup-class for modal mode too." Thanks again [amplexdenmark](https://github.com/amplexdenmark).
@@ -140,3 +144,4 @@ Used libraries (ionic bundle, angular translate) are stored in "lib" root folder
 - Project creator: [domiSchenk](https://github.com/domiSchenk)
 - Fork and current maintainer: [postb99@OSAMES](https://github.com/postb99)
 - Merged pull requests: [ivomans](https://github.com/ivomans), [amplexdenmark](https://github.com/amplexdenmark), [aless673](https://github.com/aless673)
+- Request for bugfix: [sargin48](https://github.com/sargin48)

@@ -138,6 +138,10 @@
                     $scope.label =  label;
                 };
 
+                $scope.setPlaceHolder = function(newValue) {
+                    $scope.placeHolder = newValue;
+                };
+
                 $scope.$on('reset', function(){
                     $scope.setPlaceholderLabel($scope.ngPlaceholder);
                     $scope.ngSelectedValue = null;
